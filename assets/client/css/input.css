@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.61);
+    font-weight: 400;
+    background: #ffffff;
+  }
+}
+
+@layer components {
+  .layout-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+    line-height: 17px;
+    cursor: pointer;
+  }
+
+  .button--normal {
+    color: #fcc822;
+    background: #ffffff;
+    border: 0.580569px solid #fcc822;
+    box-shadow: 0px 10.4502px 23.2228px -6.96683px #fbe18f;
+  }
+  .button--primary {
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(95.34deg, #fcc822 0%, #ffcd2e 100%);
+    box-shadow: 0px 10.4502px 23.2228px -6.96683px #fbe18f;
+  }
+  .button--secondary {
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(95.34deg, #d1d1d1 0%, #d1d1d1 100%);
+    box-shadow: 0px 5.80569px 23.2228px -6.96683px #d1d1d1;
+  }
+
+  .form-field {
+    padding: 7px 15px;
+    border: 0.580569px solid #c1bbbb;
+    transition: all 0.1s linear;
+  }
+
+  .form-field label {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  .form-field .form-input {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-color: transparent;
+    color: #fcc822;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .form-field:focus-within {
+    border-left: 4px #fcc822 solid !important;
+  }
+
+  .typed-animation {
+    display: inline-block;
+  }
+
+  .typed-out {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.25rem solid #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    animation: typing 8s steps(40) infinite, blinking 1s infinite;
+  }
+
+  @keyframes typing {
+    0%,
+    100% {
+      width: 0;
+    }
+
+    50%,
+    90% {
+      width: 100%;
+    }
+  }
+
+  @keyframes blinking {
+    0%,
+    100% {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: #fff;
+    }
+  }
+
+  .form-checkbox input {
+    height: 1rem;
+    width: 1rem;
+    margin-top: 0.275em;
+    accent-color: #fcc822;
+  }
+
+  .active {
+    background-color: #fcc822 !important;
+    color: white !important;
+  }
+}
